@@ -2,8 +2,8 @@ name: main
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - 'main'
 
 jobs:
   docker:
@@ -14,6 +14,6 @@ jobs:
 
       - name: Build Test
         run: |
-          echo "Настоящая автоматическая сборка проекта uchanin по ТЕГУ запущена успешно!"
+          echo "Тестовая сборка main при обычном коммите выполнена!"
 
 # trigger
