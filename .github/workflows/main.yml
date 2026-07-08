@@ -12,3 +12,5 @@ jobs:
         run: |
           echo "Настоящая автоматическая сборка проекта uchanin запущенна успешно!"
           docker build -t test-image .
+
+# trigger
