@@ -1,16 +1,19 @@
 name: main
+
 on:
   push:
-    branches:
-      - 'main'
+    tags:
+      - 'v*'
+
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Build Test
         run: |
-          echo "Настоящая автоматическая сборка проекта uchanin запущенна успешно!"
-          docker build -t test-image .
+          echo "Настоящая автоматическая сборка проекта uchanin по ТЕГУ запущена успешно!"
 
 # trigger
